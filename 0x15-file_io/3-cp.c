@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 char *create_buffer(char *file);
-void close_file(int FD_VALUE);
+void close_file(int fd);
 
 /**
  * create_buffer - Allocates 1024 bytes for a buffer.
@@ -29,17 +29,17 @@ char *create_buffer(char *file)
 
 /**
  * close_file - Closes file descriptors.
- * @FD_VALUE: The file descriptor to be closed.
+ * @fd: The file descriptor to be closed.
  */
-void close_file(int FD_VALUE)
+void close_file(int fd)
 {
 	int c;
 
-	c = close(FD_VALUE);
+	c = close(fd);
 
 	if (c == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close FD_VALUE %d\n", FD_VALUE);
+		dprintf(STDERR_FILENO, "Error: Can't close fd  %d\n", fd);
 		exit(100);
 	}
 }
