@@ -1,16 +1,14 @@
 #!/usr/bin/python3
-"""
-Island Perimeter
-"""
+""" Defines an island perimeter measuring function """
+
 
 def island_perimeter(grid):
-    """returns the perimeter of the island described in grid
-
+    """ Return the perimiter of an island.
+    The grid represents water by 0 and land by 1.
     Args:
-    grid (list):
-        A list of list of integers representing an island.
-    Returns: 
-        The perimeter of the island define
+        grid (list): A list of list of integers representing an island.
+    Returns:
+        The perimeter of the island defined in grid
     """
     lands = 0
     side = 0
